@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>🎲 Ular Tangga Edukasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎲 Ular Tangga V.1.1</h1>
+
+  <!-- papan -->
+  <canvas id="board" width="512" height="512"></canvas>
+  <div id="tokenContainer"></div>
+
+  <!-- kontrol -->
+  <div class="controls">
+    <label>Pilih Tim: 
+      <select id="playerSelect">
+        <option value="0">Tim 1 (Merah)</option>
+        <option value="1">Tim 2 (Biru)</option>
+        <option value="2">Tim 3 (Hijau)</option>
+        <option value="3">Tim 4 (Oranye)</option>
+        <option value="4">Tim 5 (Ungu)</option>
+        <option value="5">Tim 6 (Hitam)</option>
+      </select>
+    </label>
+    <button onclick="rollDice()">Lempar Dadu</button>
+    <p id="diceResult" style="font-size: 30px; border: 2px solid black; padding: 10px; display: inline-block; border-radius: 10px; background-color: #f0f0f0;">
+  Dadu: -
+    </p>
+
+  </div>
+
+  <!-- kontrol manual -->
+  <div class="controls">
+    <label>Posisi Manual (1–100): 
+      <input type="number" id="manualPos" min="1" max="100">
+    </label>
+    <button onclick="movePlayerManual()">Pindahkan</button>
+  </div>
+
+  <!-- soal objektif -->
+  <div id="questionBox">
+    <p id="questionText">Pertanyaan akan muncul di sini</p>
+    <div id="options"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
